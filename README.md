@@ -9,19 +9,19 @@ Add “ android:usesCleartextTraffic="true"” on /android/app/src/main/AndroidM
 
     <application
             android:label="flutter_text"
-            android:usesCleartextTraffic="true"			                                        <—————
+            android:usesCleartextTraffic="true"     <—————
             android:icon="@mipmap/ic_launcher">
 
 Furthermore, add permissions
 
     package="com.example.flutter_text">
-        <uses-permission android:name="android.permission.INTERNET" />							<—————
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />			    <—————
-        <uses-permission android:name="android.permission.WAKE_LOCK" />							<—————
+        <uses-permission android:name="android.permission.INTERNET" />					<—————
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	    <—————
+        <uses-permission android:name="android.permission.WAKE_LOCK" />					<—————
     <application
 
 on /android/app/build.gradle change the min SDK
-    minSdkVersion 19
+    "minSdkVersion 19"
 
 If you obtain the error of “java SDK”. Then, open the app in the android studio. Go to File>Project Structure> project to select android sdk 
 
