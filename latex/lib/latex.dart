@@ -39,7 +39,6 @@ TeXViewWidget alignedTag = _teXViewWidget(r"<h4>Table</h4>", r"""
               \hline \hline
               \sigma_{A_{.name} = B_{.name}}(A x B) 
               & 
-              
               \text{select} * \text{from A INNER JOIN B ON A.name = B.name} \\
               \hline 
            \end{array}
