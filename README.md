@@ -15,9 +15,9 @@ Add “ android:usesCleartextTraffic="true"” on /android/app/src/main/AndroidM
 Furthermore, add permissions
 
     package="com.example.flutter_text">
-        <uses-permission android:name="android.permission.INTERNET" />					<—————
+        <uses-permission android:name="android.permission.INTERNET" />				<—————
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />	    <—————
-        <uses-permission android:name="android.permission.WAKE_LOCK" />					<—————
+        <uses-permission android:name="android.permission.WAKE_LOCK" />				<—————
     <application
 
 on /android/app/build.gradle change the min SDK
