@@ -122,7 +122,7 @@ class TeXViewDocumentExamples extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: TeXView(
-        height: double.infinity,
+        //height: double.infinity,
         renderingEngine: renderingEngine,
         child: TeXViewColumn(children: [
           image(),
