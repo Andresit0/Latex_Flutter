@@ -110,11 +110,30 @@ TeXViewWidget _teXViewWidget(String title, String body) {
   ]);
 }
 
+const expr = r'''
+      \addBar{x} + \bold{y}
+    ''';
+
+const macros = r'''
+      \newcommand{\addBar}[1]{\bar{#1}}
+      \newcommand{\bold}[1]{\mathbf{#1}}
+    ''';
+
+TeXViewWidget macrosWidget = _teXViewWidget(
+    r"<h4>Table</h4>",
+    r'''
+            $$
+            a
+            $$
+            '''
+        .replaceFirst('a', macros + expr));
+
 class TeXViewDocumentExamples extends StatelessWidget {
   final TeXViewRenderingEngine renderingEngine;
 
   const TeXViewDocumentExamples(
-      {super.key, this.renderingEngine = const TeXViewRenderingEngine.katex()});
+      {super.key,
+      this.renderingEngine = const TeXViewRenderingEngine.mathjax()});
 
   @override
   Widget build(BuildContext context) {
@@ -132,6 +151,7 @@ class TeXViewDocumentExamples extends StatelessWidget {
           alignedTag,
           matrix,
           align,
+          macrosWidget,
         ]),
       ),
     );
